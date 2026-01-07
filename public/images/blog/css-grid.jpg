@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#555555"/>
+  <rect x="100" y="100" width="300" height="200" fill="#A83232" opacity="0.8"/>
+  <rect x="450" y="100" width="300" height="200" fill="#A83232" opacity="0.6"/>
+  <rect x="800" y="100" width="300" height="200" fill="#A83232" opacity="0.4"/>
+  <text x="50%" y="50%" font-family="Montserrat, sans-serif" font-size="48" fill="white" text-anchor="middle" dominant-baseline="middle">
+    CSS Grid
+  </text>
+</svg>
