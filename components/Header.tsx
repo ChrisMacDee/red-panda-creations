@@ -20,19 +20,13 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
-          <svg
+          <img
+            src="/logo.svg"
+            alt="Red Panda Logo"
             className={styles.logoIcon}
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            aria-label="Red Panda Logo"
-          >
-            <circle cx="16" cy="16" r="14" fill="#A83232" />
-            <circle cx="12" cy="13" r="2" fill="white" />
-            <circle cx="20" cy="13" r="2" fill="white" />
-            <path d="M12 20 Q16 23 20 20" stroke="white" strokeWidth="2" fill="none" />
-          </svg>
+            width="40"
+            height="40"
+          />
           <span className={styles.logoText}>Red Panda Creations</span>
         </Link>
 

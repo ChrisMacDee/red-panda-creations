@@ -31,14 +31,7 @@ export default function AboutPage() {
           <div className={styles.storyGrid}>
             <div className={styles.imageColumn}>
               <div className={styles.profileImageWrapper}>
-                <svg viewBox="0 0 400 400" fill="none">
-                  <circle cx="200" cy="200" r="180" fill="#A83232" opacity="0.1"/>
-                  <circle cx="200" cy="200" r="120" fill="#A83232" opacity="0.2"/>
-                  <circle cx="200" cy="200" r="80" fill="#A83232"/>
-                  <circle cx="175" cy="180" r="15" fill="white"/>
-                  <circle cx="225" cy="180" r="15" fill="white"/>
-                  <path d="M160 220 Q200 250 240 220" stroke="white" strokeWidth="6" fill="none"/>
-                </svg>
+                <img src="/logo.svg" alt="Red Panda Creations" />
               </div>
             </div>
             <div className={styles.textColumn}>

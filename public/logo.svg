@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#C93636" stroke-width="6"/>
+  <!-- Inner Circle -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#C93636" stroke-width="6"/>
+  <!-- Red Panda Face Background -->
+  <circle cx="100" cy="100" r="65" fill="#C93636"/>
+
+  <!-- Left Ear Highlight -->
+  <path d="M 70 60 L 75 50 L 65 55 Z" fill="white"/>
+  <!-- Right Ear Highlight -->
+  <path d="M 130 60 L 125 50 L 135 55 Z" fill="white"/>
+
+  <!-- Left Eye -->
+  <ellipse cx="85" cy="90" rx="12" ry="16" fill="white"/>
+  <!-- Right Eye -->
+  <ellipse cx="115" cy="90" rx="12" ry="16" fill="white"/>
+
+  <!-- Left Cheek Fur -->
+  <path d="M 65 95 Q 70 105 75 100" fill="white"/>
+  <path d="M 60 100 Q 65 110 70 105" fill="white"/>
+  <path d="M 55 105 Q 60 115 65 110" fill="white"/>
+
+  <!-- Right Cheek Fur -->
+  <path d="M 135 95 Q 130 105 125 100" fill="white"/>
+  <path d="M 140 100 Q 135 110 130 105" fill="white"/>
+  <path d="M 145 105 Q 140 115 135 110" fill="white"/>
+
+  <!-- Nose -->
+  <ellipse cx="100" cy="105" rx="8" ry="6" fill="#8B0000"/>
+
+  <!-- Snout Highlight -->
+  <ellipse cx="100" cy="115" rx="18" ry="12" fill="white"/>
+
+  <!-- Mouth -->
+  <path d="M 100 105 Q 90 120 85 125" stroke="#8B0000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 100 105 Q 110 120 115 125" stroke="#8B0000" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

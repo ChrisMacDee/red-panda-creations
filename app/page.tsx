@@ -23,16 +23,8 @@ export default function Home() {
             </Link>
           </div>
           <div className={styles.heroImage}>
-            {/* Placeholder for hero image */}
             <div className={styles.heroImagePlaceholder}>
-              <svg viewBox="0 0 400 400" fill="none">
-                <circle cx="200" cy="200" r="150" fill="#A83232" opacity="0.1"/>
-                <circle cx="200" cy="200" r="100" fill="#A83232" opacity="0.2"/>
-                <circle cx="200" cy="200" r="50" fill="#A83232"/>
-                <circle cx="180" cy="180" r="10" fill="white"/>
-                <circle cx="220" cy="180" r="10" fill="white"/>
-                <path d="M170 220 Q200 240 230 220" stroke="white" strokeWidth="4" fill="none"/>
-              </svg>
+              <img src="/logo.svg" alt="Red Panda Creations Logo" />
             </div>
           </div>
         </div>
