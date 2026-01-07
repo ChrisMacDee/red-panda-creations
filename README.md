@@ -2,6 +2,8 @@
 
 A modern, performant static portfolio and blog website showcasing diverse hobbies ranging from web development to physical crafting. Built with Next.js and featuring a markdown-based content management system.
 
+**🌐 Live Demo:** [https://ChrisMacDee.github.io/red-panda-creations](https://ChrisMacDee.github.io/red-panda-creations)
+
 ## 🚀 Features
 
 ### Pages
@@ -221,16 +223,36 @@ Update font imports and variables in `styles/globals.scss`:
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### GitHub Pages (Automatic)
+
+This project is configured to automatically deploy to GitHub Pages when you push to the `main` branch.
+
+**Setup:**
+1. Ensure GitHub Pages is enabled in your repository settings
+2. Set the source to "GitHub Actions"
+3. Push to the `main` branch
+4. The site will be available at: `https://[username].github.io/red-panda-creations`
+
+The deployment workflow (`.github/workflows/deploy.yml`) will:
+- Build the Next.js site with static export
+- Upload the build artifacts
+- Deploy to GitHub Pages
+
+**Manual Deployment:**
+```bash
+# Build the static site
+npm run build
+
+# The output will be in the ./out directory
+# You can manually upload this to any static hosting service
+```
+
+### Vercel (Alternative)
 1. Push to GitHub
 2. Import project in Vercel
 3. Deploy
 
-### Static Export
-```bash
-npm run build
-# Deploy the .next folder
-```
+**Note:** If deploying to Vercel or another platform, you may want to remove or adjust the `basePath` in `next.config.js`.
 
 ## 📄 License
 
