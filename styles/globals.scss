@@ -1,0 +1,207 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:ital,wght@0,400;1,400&display=swap');
+
+// Design System Variables
+:root {
+  // Colors
+  --color-primary: #A83232;
+  --color-background: #F8F8F8;
+  --color-text-primary: #222222;
+  --color-text-secondary: #555555;
+  --color-ui-black: #000000;
+  --color-border: #E5E5E5;
+  --color-white: #FFFFFF;
+
+  // Typography
+  --font-header: 'Montserrat', sans-serif;
+  --font-body: 'Lato', sans-serif;
+
+  // Spacing
+  --spacing-unit: 8px;
+  --spacing-xs: calc(var(--spacing-unit) * 1); // 8px
+  --spacing-sm: calc(var(--spacing-unit) * 2); // 16px
+  --spacing-md: calc(var(--spacing-unit) * 3); // 24px
+  --spacing-lg: calc(var(--spacing-unit) * 4); // 32px
+  --spacing-xl: calc(var(--spacing-unit) * 5); // 40px
+  --spacing-2xl: calc(var(--spacing-unit) * 6); // 48px
+  --spacing-3xl: calc(var(--spacing-unit) * 8); // 64px
+  --spacing-4xl: calc(var(--spacing-unit) * 10); // 80px
+
+  // Layout
+  --container-max-width: 1200px;
+  --content-max-width: 800px;
+  --section-padding-desktop: 80px;
+  --section-padding-mobile: 40px;
+
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+}
+
+// Global Reset & Base Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: 3rem; // 48px
+  @media (max-width: 768px) {
+    font-size: 2rem; // 32px
+  }
+}
+
+h2 {
+  font-size: 2.25rem; // 36px
+  @media (max-width: 768px) {
+    font-size: 1.75rem; // 28px
+  }
+}
+
+h3 {
+  font-size: 1.5rem; // 24px
+  @media (max-width: 768px) {
+    font-size: 1.25rem; // 20px
+  }
+}
+
+h4 {
+  font-size: 1.25rem; // 20px
+}
+
+h5 {
+  font-size: 1.125rem; // 18px
+}
+
+h6 {
+  font-size: 1rem; // 16px
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+
+  li {
+    margin-bottom: var(--spacing-xs);
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: var(--spacing-lg) 0;
+  padding-left: var(--spacing-md);
+  border-left: 4px solid var(--color-primary);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Container Utility
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+
+  @media (max-width: 768px) {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+// Content Container (narrower for readability)
+.content-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+// Section Padding
+.section {
+  padding: var(--section-padding-desktop) 0;
+
+  @media (max-width: 768px) {
+    padding: var(--section-padding-mobile) 0;
+  }
+}
+
+// Code Styling (for syntax highlighting)
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow-x: auto;
+
+  code {
+    background-color: transparent;
+    padding: 0;
+    color: #d4d4d4;
+    font-size: 0.875rem;
+  }
+}
+
+// Highlight.js Theme Override (for dark code blocks)
+.hljs {
+  background: #1e1e1e !important;
+  padding: var(--spacing-md) !important;
+  border-radius: 8px;
+}
