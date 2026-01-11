@@ -1,6 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-  <rect width="1200" height="675" fill="#A83232"/>
-  <text x="50%" y="50%" font-family="Montserrat, sans-serif" font-size="48" fill="white" text-anchor="middle" dominant-baseline="middle">
-    Code &amp; Clay
-  </text>
+  <defs>
+    <linearGradient id="splitBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4a5568;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b45309;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow1" cx="30%" cy="50%">
+      <stop offset="0%" style="stop-color:#A83232;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#A83232;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="70%" cy="50%">
+      <stop offset="0%" style="stop-color:#A83232;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#A83232;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#splitBg)"/>
+  <circle cx="300" cy="337.5" r="300" fill="url(#glow1)"/>
+  <circle cx="900" cy="337.5" r="300" fill="url(#glow2)"/>
+
+  <!-- Dividing Line -->
+  <line x1="600" y1="0" x2="600" y2="675" stroke="rgba(168,50,50,0.5)" stroke-width="3"/>
+
+  <!-- Left Side: Code -->
+  <g opacity="0.5">
+    <!-- Terminal Window -->
+    <rect x="100" y="150" width="400" height="300" rx="10" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <circle cx="120" cy="170" r="5" fill="#ff5f56"/>
+    <circle cx="140" cy="170" r="5" fill="#ffbd2e"/>
+    <circle cx="160" cy="170" r="5" fill="#27c93f"/>
+
+    <!-- Code Lines -->
+    <g fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="14">
+      <text x="120" y="220">function craft() {'{'}</text>
+      <text x="140" y="245">  const art = create()</text>
+      <text x="140" y="270">  return refine(art)</text>
+      <text x="120" y="295">{'}'}</text>
+    </g>
+
+    <!-- Binary digits -->
+    <g fill="rgba(255,255,255,0.15)" font-family="monospace" font-size="12">
+      <text x="150" y="400">01001000 01100101 01101100</text>
+      <text x="150" y="420">01101100 01101111 00100001</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Clay/Pottery -->
+  <g opacity="0.5">
+    <!-- Pottery Wheel/Vase -->
+    <ellipse cx="900" cy="450" rx="120" ry="20" fill="rgba(0,0,0,0.3)"/>
+    <path d="M 840 450 Q 840 380 870 320 L 930 320 Q 960 380 960 450 Z" fill="rgba(120,80,40,0.7)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    <ellipse cx="900" cy="320" rx="30" ry="8" fill="rgba(80,50,20,0.8)"/>
+
+    <!-- Swirl/Motion Lines -->
+    <path d="M 750 250 Q 850 280 950 250" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 750 290 Q 850 320 950 290" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Central Symbol - Ampersand -->
+  <text x="600" y="370" font-family="Georgia, serif" font-size="120" fill="rgba(168,50,50,0.7)" text-anchor="middle" font-weight="bold" font-style="italic">&amp;</text>
+
+  <!-- Title -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" font-weight="bold">Code &amp; Clay</text>
+  <text x="600" y="630" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.8)" text-anchor="middle">The Art of Creation</text>
 </svg>

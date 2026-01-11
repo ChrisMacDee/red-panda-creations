@@ -1,9 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-  <rect width="1200" height="675" fill="#555555"/>
-  <rect x="100" y="100" width="300" height="200" fill="#A83232" opacity="0.8"/>
-  <rect x="450" y="100" width="300" height="200" fill="#A83232" opacity="0.6"/>
-  <rect x="800" y="100" width="300" height="200" fill="#A83232" opacity="0.4"/>
-  <text x="50%" y="50%" font-family="Montserrat, sans-serif" font-size="48" fill="white" text-anchor="middle" dominant-baseline="middle">
-    CSS Grid
-  </text>
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg1)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- Grid Illustration -->
+  <g opacity="0.3">
+    <rect x="100" y="100" width="300" height="200" fill="none" stroke="white" stroke-width="3"/>
+    <rect x="450" y="100" width="300" height="200" fill="none" stroke="white" stroke-width="3"/>
+    <rect x="800" y="100" width="300" height="200" fill="none" stroke="white" stroke-width="3"/>
+    <rect x="100" y="350" width="300" height="200" fill="none" stroke="white" stroke-width="3"/>
+    <rect x="450" y="350" width="300" height="200" fill="none" stroke="white" stroke-width="3"/>
+    <rect x="800" y="350" width="300" height="200" fill="none" stroke="white" stroke-width="3"/>
+  </g>
+
+  <!-- Code Brackets -->
+  <text x="600" y="280" font-family="monospace" font-size="180" fill="rgba(255,255,255,0.2)" text-anchor="middle" font-weight="bold">&lt; / &gt;</text>
+
+  <!-- Title -->
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="42" fill="white" text-anchor="middle" font-weight="bold">CSS Grid Layouts</text>
+  <text x="600" y="500" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.8)" text-anchor="middle">Responsive Design</text>
 </svg>
