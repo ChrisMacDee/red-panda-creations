@@ -3,7 +3,7 @@ slug: "building-responsive-layouts"
 title: "Building Responsive Layouts with CSS Grid"
 date: "2023-11-15"
 excerpt: "A comprehensive guide to creating flexible, responsive layouts using modern CSS Grid techniques and best practices."
-coverImage: "/images/blog/css-grid.jpg"
+coverImage: "/images/blog/css-grid.svg"
 category: "Web Dev"
 tags: ["css", "responsive-design", "frontend"]
 ---

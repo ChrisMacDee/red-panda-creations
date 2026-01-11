@@ -3,7 +3,7 @@ slug: "leather-working-basics"
 title: "Leather Working Basics: Getting Started"
 date: "2023-12-01"
 excerpt: "A beginner's guide to leather crafting, covering essential tools, techniques, and your first project ideas."
-coverImage: "/images/blog/leather-tools.jpg"
+coverImage: "/images/blog/leather-tools.svg"
 category: "Crafts"
 tags: ["leather", "crafting", "tutorial"]
 ---

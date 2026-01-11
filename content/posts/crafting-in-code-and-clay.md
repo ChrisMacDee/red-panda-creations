@@ -3,7 +3,7 @@ slug: "crafting-in-code-and-clay"
 title: "Crafting in Code & Clay"
 date: "2023-10-27"
 excerpt: "An exploration of how digital architecture and physical sculpting share similar creative processes and problem-solving approaches."
-coverImage: "/images/blog/code-clay.jpg"
+coverImage: "/images/blog/code-clay.svg"
 category: "Philosophy"
 tags: ["coding", "sculpting", "creativity"]
 ---

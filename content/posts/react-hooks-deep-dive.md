@@ -3,7 +3,7 @@ slug: "react-hooks-deep-dive"
 title: "React Hooks: A Deep Dive"
 date: "2023-11-28"
 excerpt: "Understanding React Hooks from the ground up - how they work, when to use them, and common patterns for building better components."
-coverImage: "/images/blog/react-hooks.jpg"
+coverImage: "/images/blog/react-hooks.svg"
 category: "Web Dev"
 tags: ["react", "javascript", "hooks"]
 ---
