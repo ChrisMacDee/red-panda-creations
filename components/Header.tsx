@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { useTheme } from './ThemeProvider'
+import { BASE_PATH } from '@/lib/constants'
 import styles from './Header.module.scss'
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
           <img
-            src="/logo.svg"
+            src={`${BASE_PATH}/logo.svg`}
             alt="Red Panda Logo"
             className={styles.logoIcon}
             width="40"
@@ -109,6 +110,26 @@ const Header = () => {
           >
             Search
           </Link>
+          {mounted && (
+            <button onClick={toggleTheme} className={styles.mobileThemeToggle} aria-label="Toggle theme">
+              {theme === 'dark' ? (
+                <>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="10" cy="10" r="4"/>
+                    <path d="M10 1v2M10 17v2M3.22 3.22l1.42 1.42M15.36 15.36l1.42 1.42M1 10h2M17 10h2M3.22 16.78l1.42-1.42M15.36 4.64l1.42-1.42"/>
+                  </svg>
+                  Light Mode
+                </>
+              ) : (
+                <>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17 10.5A7 7 0 1 1 9.5 3a7 7 0 0 0 7.5 7.5z"/>
+                  </svg>
+                  Dark Mode
+                </>
+              )}
+            </button>
+          )}
         </div>
       )}
     </header>

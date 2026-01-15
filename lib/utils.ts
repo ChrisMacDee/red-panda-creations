@@ -1,3 +1,5 @@
+import { SITE_URL } from './constants'
+
 // Calculate reading time for markdown content
 export function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200
@@ -17,7 +19,7 @@ export function formatDate(dateString: string): string {
 
 // Get base URL for sharing
 export function getBaseUrl(): string {
-  return 'https://ChrisMacDee.github.io/red-panda-creations'
+  return SITE_URL
 }
 
 // Generate share URLs

@@ -1,5 +1,6 @@
 import { getLatestPosts } from '@/lib/posts'
 import ArticleCard from '@/components/ArticleCard'
+import { BASE_PATH } from '@/lib/constants'
 import styles from './page.module.scss'
 import Link from 'next/link'
 
@@ -24,7 +25,7 @@ export default function Home() {
           </div>
           <div className={styles.heroImage}>
             <div className={styles.heroImagePlaceholder}>
-              <img src="/logo.svg" alt="Red Panda Creations Logo" />
+              <img src={`${BASE_PATH}/logo.svg`} alt="Red Panda Creations Logo" />
             </div>
           </div>
         </div>

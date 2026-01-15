@@ -1,3 +1,4 @@
+import { BASE_PATH } from '@/lib/constants'
 import styles from './page.module.scss'
 import Image from 'next/image'
 
@@ -31,7 +32,7 @@ export default function AboutPage() {
           <div className={styles.storyGrid}>
             <div className={styles.imageColumn}>
               <div className={styles.profileImageWrapper}>
-                <img src="/logo.svg" alt="Red Panda Creations" />
+                <img src={`${BASE_PATH}/logo.svg`} alt="Red Panda Creations" />
               </div>
             </div>
             <div className={styles.textColumn}>
