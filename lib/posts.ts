@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { calculateReadingTime } from './utils'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
@@ -12,6 +13,7 @@ export interface PostMetadata {
   coverImage: string
   category: string
   tags: string[]
+  readingTime: number
 }
 
 export interface Post extends PostMetadata {
@@ -58,9 +60,10 @@ export function getPostBySlug(slug: string): Post | null {
       title: data.title || '',
       date: data.date || '',
       excerpt: data.excerpt || '',
-      coverImage: data.coverImage || '/images/blog/default.jpg',
+      coverImage: data.coverImage || '/images/blog/default.svg',
       category: data.category || 'Uncategorized',
       tags: data.tags || [],
+      readingTime: calculateReadingTime(content),
       content,
     }
   } catch (error) {
@@ -119,4 +122,28 @@ export function getRelatedPosts(slug: string, count: number = 3): Post[] {
   return categoryPosts
     .filter(post => post.slug !== slug)
     .slice(0, count)
+}
+
+// Get all unique tags
+export function getAllTags(): { tag: string; count: number }[] {
+  const posts = getAllPosts()
+  const tagCounts = new Map<string, number>()
+
+  posts.forEach(post => {
+    post.tags.forEach(tag => {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+    })
+  })
+
+  return Array.from(tagCounts.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count)
+}
+
+// Get posts by tag
+export function getPostsByTag(tag: string): Post[] {
+  const allPosts = getAllPosts()
+  return allPosts.filter(post =>
+    post.tags.some(t => t.toLowerCase() === tag.toLowerCase())
+  )
 }
