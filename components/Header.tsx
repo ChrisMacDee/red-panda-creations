@@ -1,11 +1,18 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useTheme } from './ThemeProvider'
 import styles from './Header.module.scss'
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme, toggleTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -43,6 +50,20 @@ const Header = () => {
               <path d="M14 14L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </Link>
+          {mounted && (
+            <button onClick={toggleTheme} className={styles.themeToggle} aria-label="Toggle theme">
+              {theme === 'dark' ? (
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="10" cy="10" r="4"/>
+                  <path d="M10 1v2M10 17v2M3.22 3.22l1.42 1.42M15.36 15.36l1.42 1.42M1 10h2M17 10h2M3.22 16.78l1.42-1.42M15.36 4.64l1.42-1.42"/>
+                </svg>
+              ) : (
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 10.5A7 7 0 1 1 9.5 3a7 7 0 0 0 7.5 7.5z"/>
+                </svg>
+              )}
+            </button>
+          )}
         </nav>
 
         {/* Mobile Menu Button */}

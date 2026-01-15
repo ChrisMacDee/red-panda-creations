@@ -1,0 +1,86 @@
+.tagsPage {
+  min-height: 100vh;
+}
+
+.tagsHeader {
+  background-color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+
+  @media (max-width: 768px) {
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+.tagsTitle {
+  font-family: var(--font-header);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+.tagsSubtitle {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+}
+
+.tagsSection {
+  background-color: var(--color-background);
+}
+
+.tagsCloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tagBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-primary);
+    color: white;
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    .tagCount {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+  }
+}
+
+.tagCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 var(--spacing-xs);
+  background-color: var(--color-background);
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}

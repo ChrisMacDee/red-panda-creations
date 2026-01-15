@@ -1,0 +1,61 @@
+.tagPage {
+  min-height: 100vh;
+}
+
+.tagHeader {
+  background-color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+
+  @media (max-width: 768px) {
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+.tagTitle {
+  font-family: var(--font-header);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+.tagLabel {
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.tagCount {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+}
+
+.postsSection {
+  background-color: var(--color-background);
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}

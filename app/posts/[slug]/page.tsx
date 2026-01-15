@@ -1,4 +1,4 @@
-import { getPostBySlug, getAllPostSlugs } from '@/lib/posts'
+import { getPostBySlug, getAllPostSlugs, getRelatedPosts } from '@/lib/posts'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeRaw from 'rehype-raw'
+import ShareButtons from '@/components/ShareButtons'
+import RelatedPosts from '@/components/RelatedPosts'
 import styles from './page.module.scss'
 import 'highlight.js/styles/atom-one-dark.css'
 
@@ -44,6 +46,8 @@ export default function PostPage({ params }: PageProps) {
     notFound()
   }
 
+  const relatedPosts = getRelatedPosts(params.slug, 3)
+
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
@@ -63,6 +67,8 @@ export default function PostPage({ params }: PageProps) {
               <Link href={`/category/${post.category.toLowerCase().replace(/\s+/g, '-')}`} className={styles.postCategory}>
                 {post.category}
               </Link>
+              <span className={styles.separator}>|</span>
+              <span className={styles.readTime}>{post.readingTime} min read</span>
             </div>
           </div>
           {post.coverImage && (
@@ -117,6 +123,18 @@ export default function PostPage({ params }: PageProps) {
           </ReactMarkdown>
         </div>
       </div>
+
+      {/* Share Buttons */}
+      <div className="container">
+        <ShareButtons slug={params.slug} title={post.title} />
+      </div>
+
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+        <div className="container">
+          <RelatedPosts posts={relatedPosts} />
+        </div>
+      )}
     </article>
   )
 }

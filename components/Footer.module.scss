@@ -28,3 +28,22 @@
   display: flex;
   gap: var(--spacing-md);
 }
+
+.rssLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
