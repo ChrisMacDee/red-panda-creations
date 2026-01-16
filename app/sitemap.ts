@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts, getAllTags } from '@/lib/posts'
+import { SITE_URL } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = 'https://chrismacDee.github.io/red-panda-creations'
+  const siteUrl = SITE_URL
 
   const posts = getAllPosts()
   const tags = getAllTags()

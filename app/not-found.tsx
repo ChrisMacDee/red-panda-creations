@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BASE_PATH } from '@/lib/constants'
 import styles from './not-found.module.scss'
 
 export default function NotFound() {
@@ -7,7 +8,7 @@ export default function NotFound() {
       <div className="container">
         <div className={styles.content}>
           <div className={styles.iconWrapper}>
-            <img src="/logo.svg" alt="Red Panda" className={styles.logo} />
+            <img src={`${BASE_PATH}/logo.svg`} alt="Red Panda" className={styles.logo} />
           </div>
           <h1 className={styles.title}>404</h1>
           <h2 className={styles.subtitle}>Page Not Found</h2>

@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { calculateReadingTime } from './utils'
+import { BASE_PATH } from './constants'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
@@ -55,12 +56,15 @@ export function getPostBySlug(slug: string): Post | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
+    const coverImage = data.coverImage || '/images/blog/default.svg'
+    const fullCoverImage = coverImage.startsWith('http') ? coverImage : `${BASE_PATH}${coverImage}`
+
     return {
       slug,
       title: data.title || '',
       date: data.date || '',
       excerpt: data.excerpt || '',
-      coverImage: data.coverImage || '/images/blog/default.svg',
+      coverImage: fullCoverImage,
       category: data.category || 'Uncategorized',
       tags: data.tags || [],
       readingTime: calculateReadingTime(content),

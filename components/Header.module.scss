@@ -134,3 +134,29 @@
     opacity: 1;
   }
 }
+
+.mobileThemeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-header);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  transition: background-color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background-color: var(--color-background);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
